@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <title>Combat pokémon</title>
+</head>
+
+<body>
+    <script src="PokemonDresse.js"></script>
+
+    <header class="bg-red-700 text-center">
+        <h1>Basta</h1>
+    </header>
+    <div id="pokémonHead" class='grid grid-cols-4 place-items-center'>
+        <div class="">
+            <img onclick="selectPokemon(0) " id="pokeselect1" src="/img/pika.png" alt="">
+        </div>
+        <div>
+            <img onclick="selectPokemon(1) " id="pokeselect2" src="/img/tortank.png" alt="">
+        </div>
+        <div class="">
+            <img onclick="selectPokemon(2) " id="pokeselect3" src="/img/dracau.png" alt="">
+        </div>
+        <div class="">
+            <img onclick="selectPokemon(3) " id="pokeselect4" src="img/flo.png" alt="">
+        </div>
+    </div>
+
+
+    <div id="pokemonPresent">
+        <div id="nomPokémon">
+            {{pokemonDresses[0].name}}
+        </div>
+        <div>
+            <img id="imagePokémon" src="img/eiscue.gif" alt="" class="m-auto">
+        </div>
+        <div id="statsPokémon">
+            <ul>
+                <li id="hp"> </li>
+                <li id="attack"> </li>
+                <li id="defense"> </li>
+                <li id="speed"> </li>
+            </ul>
+            <button onclick="setFight()" type="submit" class="content-center">Combat</button>
+        </div>
+    </div>
+    <div id="battlefield" class="bg-red-700">
+        <div id="pokémonAdverse" class="grid grid-cols-2">
+            <div>
+                <h1 id="vilain" class="text-left pr-2">pokemonAdverse.this.name</h1>
+                <progress id="vilainHp" max="100" value="70" class="justify-self-start"></progress>
+            </div>
+            <div>
+                <img id="vilainImg" src="/img/dracau.gif" alt="">
+            </div>
+        </div>
+        <div lass="grid grid-cols-2">
+            <div>
+                <img id="pokémonSelectionner" src="/img/dracaub.gif" alt="">
+            </div>
+            <div>
+                <div>
+                    <h1 id="hero" class="text-right pr-2">pokemonSelectionner.this.name</h1>
+                    <progress id="heroHp" max="100" value="70" class="justify-self-end"></progress>
+                </div>
+
+            </div>
+        </div>
+    </div>
+    <div id="controls">
+        <div id="progression">
+            <div>
+                <p>fooo</p>
+                <p>bar</p>
+            </div>
+        </div>
+        <div class="justify-center grid grid-cols-2">
+            <div id="attack">
+                <button onclick="fight()" type="submit">Attack</button>
+            </div>
+            <div id="sac">
+                <button type="submit">Sac</button>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
